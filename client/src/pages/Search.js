@@ -76,8 +76,8 @@ class Search extends Component {
                                     <Media.Body>
                                         {book.volumeInfo.imageLinks ? (
                                             <Image
-                                                width={100}
-                                                height={100}
+                                                width={150}
+                                                height={180}
                                                 className="align-self-start mr-3"
                                                 src={book.volumeInfo.imageLinks.thumbnail}
                                                 alt="Image"
@@ -85,16 +85,16 @@ class Search extends Component {
                                         ) : (
                                                 <Image
                                                     width={100}
-                                                    height={100}
+                                                    height={120}
                                                     className="align-self-start mr-3"
                                                     src="placeholder"
                                                     alt="Image"
                                                 />
                                             )
                                         }
-                                        <h5><strong>
-                                            title: {book.volumeInfo.title}
-                                        </strong></h5>
+                                        <h3><strong>
+                                            Title: {book.volumeInfo.title}
+                                        </strong></h3>
 
                                         {book.volumeInfo.authors ? (
                                             <h6><strong>

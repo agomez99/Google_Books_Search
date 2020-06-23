@@ -52,14 +52,14 @@ class Saved extends Component {
                             {this.state.books.map(book => (
                             <Card key={book.title} style={{ width: '100%', margin: '10px'}} className="shadow-sm">
                                 <Row>
-                                    <Col className="col-3">
-                                        <Card.Img className="ml-5 pl-5 pt-5" style={{width: "45%"}} src={book.image}></Card.Img>
+                                    <Col className="col-4">
+                                        <Card.Img className="ml-5 pl-5 pt-5" style={{width: "50%"}} src={book.image}></Card.Img>
                                     </Col>
-                                    <Col className="col-9">
+                                    <Col className="col-8">
                                         <Card.Body>
                                         <Button variant="danger" className="float-right" onClick={() => this.deleteBook(book._id)}>Delete</Button>
                                         <Button className="float-right mr-2" href={book.link}>View</Button>
-                                            <Card.Text ><strong>{book.title}</strong></Card.Text>
+                                            <Card.Text ><h3><strong>{book.title}</strong></h3></Card.Text>
                                             <Card.Text >Written By: <strong>{book.authors}</strong></Card.Text>
                                             <Card.Text >{book.description}</Card.Text>
                                         </Card.Body>

@@ -20,6 +20,7 @@ body {
   border: 3.5px solid #343a40;
   background-color: #e9ecef;
   padding-top: 20px;
+  padding:50px;
 }
 .logo{
   height:40px;
@@ -28,7 +29,6 @@ body {
   margin-left: 7%;
   margin-top: 10px;
   margin-bottom: 25px;
-
   font-weight: bold;
 }
 
@@ -53,4 +53,9 @@ body {
     #f2f2f2,
     #ada996
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.media-div{
+  border-bottom: 2px solid rgb(24, 23, 23);
+  padding-top:5px;
 }

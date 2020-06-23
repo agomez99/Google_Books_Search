@@ -12,7 +12,7 @@ return (
       
       <Nav className="mr-auto">
         <Nav.Link href="/">Search</Nav.Link>
-        <Nav.Link href="/saved">Save</Nav.Link>
+        <Nav.Link href="/saved">Saved Books</Nav.Link>
       </Nav>
 
     </Navbar.Collapse>
