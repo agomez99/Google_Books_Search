@@ -1,7 +1,19 @@
 .App {
   text-align: center;
 }
-
+body {
+  background: #56ccf2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2f80ed,
+    #56ccf2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2f80ed,
+    #56ccf2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .results {
   margin-top: 55px;
 
@@ -18,16 +30,25 @@
   font-weight: bold;
 }
 
-.title{
-  font-family: 'PT Sans', sans-serif;
+.title {
+  font-family: "PT Sans", sans-serif;
   font-size: 4vw;
-
-
 }
 
-
-.jumbotron{
-  background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  }
+.jumbotron {
+  background: #ada996; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
