@@ -12,7 +12,7 @@ return (
 
         <Container>
             <div className="text-center">
-                <h1> Google Books Search</h1>
+                <h1  className="title"> Google Books Search</h1>
             </div>
         </Container>
 
