@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron/index";
-import { Container, Media, Button, Image, Form} from "react-bootstrap";
+import { Container, Media, Button, Image, Form } from "react-bootstrap";
 import API from "../utils/API";
 import "./style.css";
 class Search extends Component {
@@ -70,8 +70,7 @@ class Search extends Component {
                 </Container>
                 <Container className="results">
                     <h3 id="result">Results:</h3>
-                    <div>
-                        {this.state.books.map(book => (
+                    <div> {this.state.books && this.state.books.map(book => (
                             <div className="media-div">
                                 <Media key={book.title}>
                                     <Media.Body>
@@ -101,15 +100,9 @@ class Search extends Component {
                                             <h6><strong>
                                                 Author: {book.volumeInfo.authors[0]}
                                             </strong></h6>
-                                        ) : (
-                                                <h6><strong>
-                                                    Author: Not Defined
-                            </strong></h6>
-                                            )
+                                        ) : (<h6><strong>Author: Not Defined</strong> </h6>)
                                         }
-                                        <p>
-                                            Description: {book.volumeInfo.description}
-                                        </p>
+                                        <p> Description: {book.volumeInfo.description} </p>
                                     </Media.Body>
                                     <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
                                     <Button variant="success" type="submit" onClick={this.saveButtonSubmit} name={book.volumeInfo.description} value={[book.volumeInfo.title, book.volumeInfo.imageLinks.thumbnail, book.volumeInfo.authors[0], book.volumeInfo.previewLink]}>Save</Button>
