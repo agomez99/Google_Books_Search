@@ -71,45 +71,45 @@ class Search extends Component {
                 <Container className="results">
                     <h3 id="result">Results:</h3>
                     <div> {this.state.books && this.state.books.map(book => (
-                            <div className="media-div">
-                                <Media key={book.title}>
-                                    <Media.Body>
-                                        {book.volumeInfo.imageLinks ? (
+                        <div className="media-div">
+                            <Media key={book.title}>
+                                <Media.Body>
+                                    {book.volumeInfo.imageLinks ? (
+                                        <Image
+                                            width={150}
+                                            height={180}
+                                            className="align-self-start mr-3"
+                                            src={book.volumeInfo.imageLinks.thumbnail}
+                                            alt="Image"
+                                        />
+                                    ) : (
                                             <Image
-                                                width={150}
-                                                height={180}
+                                                width={100}
+                                                height={120}
                                                 className="align-self-start mr-3"
-                                                src={book.volumeInfo.imageLinks.thumbnail}
+                                                src="placeholder"
                                                 alt="Image"
                                             />
-                                        ) : (
-                                                <Image
-                                                    width={100}
-                                                    height={120}
-                                                    className="align-self-start mr-3"
-                                                    src="placeholder"
-                                                    alt="Image"
-                                                />
-                                            )
-                                        }
-                                        <h3><strong>
-                                            Title: {book.volumeInfo.title}
-                                        </strong></h3>
+                                        )
+                                    }
+                                    <h3><strong>
+                                        Title: {book.volumeInfo.title}
+                                    </strong></h3>
 
-                                        {book.volumeInfo.authors ? (
-                                            <h6><strong>
-                                                Author: {book.volumeInfo.authors[0]}
-                                            </strong></h6>
-                                        ) : (<h6><strong>Author: Not Defined</strong> </h6>)
-                                        }
-                                        <p> Description: {book.volumeInfo.description} </p>
-                                    </Media.Body>
-                                    <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
-                                    <Button variant="success" type="submit" onClick={this.saveButtonSubmit} name={book.volumeInfo.description} value={[book.volumeInfo.title, book.volumeInfo.imageLinks.thumbnail, book.volumeInfo.authors[0], book.volumeInfo.previewLink]}>Save</Button>
-                                </Media>
-                            </div>
+                                    {book.volumeInfo.authors ? (
+                                        <h6><strong>
+                                            Author: {book.volumeInfo.authors[0]}
+                                        </strong></h6>
+                                    ) : (<h6><strong>Author: Not Defined</strong> </h6>)
+                                    }
+                                    <p> Description: {book.volumeInfo.description} </p>
+                                </Media.Body>
+                                <Button variant="danger" href={book.volumeInfo.previewLink}>View</Button>
+                                <Button variant="success" type="submit" onClick={this.saveButtonSubmit} name={book.volumeInfo.description} value={[book.volumeInfo.title, book.volumeInfo.imageLinks.thumbnail, book.volumeInfo.authors[0], book.volumeInfo.previewLink]}>Save</Button>
+                            </Media>
+                        </div>
 
-                        ))}
+                    ))}
                     </div>
 
                 </Container>
