@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require("./models");
 
-// middleware 
+// Middleware 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -28,7 +28,7 @@ app.get("/api/books",(req,res)=>{
 app.get("/api/search/:book",(req,res)=>{
   const params = {
     q: req.params.book,
-    key: "AIzaSyA0my9YP87S1Sj345dHQEOA4CrNA9THlpc"
+    key: (process.env.REACT_APP_GOOGLE_API_KEY)
   }
   axios.get("https://www.googleapis.com/books/v1/volumes?", {params})
     .then(results =>{
